@@ -8,6 +8,10 @@
     z-index:-1;
     overflow: hidden;
 
+    @include respond(phone){
+        display:none;
+    }
+
     &__content {
         height: 100%;
         width: 100%;

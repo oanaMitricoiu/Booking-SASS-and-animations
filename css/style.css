@@ -46,6 +46,10 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 30px; }
+  @media (max-width: 37.5em) {
+    body {
+      margin: 0;
+      padding: 0; } }
 
 .heading-primary {
   color: #fff;
@@ -61,11 +65,17 @@ body {
     font-size: 25px;
     font-weight: 400;
     animation: moveInLeft 1s ease-out 0.4s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 2rem; } }
   .heading-primary--sub {
     display: block;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 400;
     animation: moveInRight 1s ease-out 0.4s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 1.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -77,11 +87,23 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .2s; }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      display: flex;
+      width: 80%;
+      flex-wrap: wrap;
+      margin-left: 13%; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
   .heading-secondary__book {
     font-size: 3rem; }
+    @media (max-width: 37.5em) {
+      .heading-secondary__book {
+        display: block;
+        width: 100%;
+        margin: 0;
+        font-size: 1.8rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -118,6 +140,10 @@ body {
   position: relative;
   border: none;
   cursor: pointer; }
+  @media (max-width: 37.5em) {
+    .btn, .btn:link, .btn:visited {
+      padding: 7px 12px;
+      font-size: 1.5rem; } }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -215,6 +241,9 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform .3s;
   margin: 0 12%; }
+  @media (max-width: 37.5em) {
+    .feature-box {
+      margin: 2rem; } }
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
@@ -232,6 +261,15 @@ body {
   position: relative;
   height: 50rem;
   width: 100%; }
+  @media (max-width: 56.25em) {
+    .card {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5rem; } }
+  @media (max-width: 37.5em) {
+    .card__pict {
+      width: 100%;
+      margin-left: 4.5rem; } }
   .card__side {
     height: 50rem;
     transition: all .8s ease;
@@ -245,8 +283,14 @@ body {
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
       background-color: #fff; }
+      @media (max-width: 56.25em) {
+        .card__side--front {
+          width: 60%; } }
     .card__side--back {
       transform: rotateY(180deg); }
+      @media (max-width: 56.25em) {
+        .card__side--back {
+          width: 60%; } }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card__side--back-2 {
@@ -255,8 +299,14 @@ body {
         background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
+    @media (max-width: 56.25em) {
+      .card:hover .card__side--front {
+        width: 60%; } }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
+    @media (max-width: 56.25em) {
+      .card:hover .card__side--back {
+        width: 60%; } }
   .card__picture {
     background-size: cover;
     height: 23rem;
@@ -293,6 +343,9 @@ body {
       background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .card__details {
     padding: 3rem; }
+    @media (max-width: 37.5em) {
+      .card__details {
+        padding: 2rem; } }
     .card__details ul {
       list-style: none;
       width: 80%;
@@ -343,6 +396,12 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative; }
+    @supports (clip-path: circle(50% at 50% 50%)) {
+      .story__shape {
+        clip-path: circle(50% at 50% 50%); } }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: none; } }
   .story__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
@@ -350,6 +409,9 @@ body {
     transform: all .5s; }
   .story__text {
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        transform: none; } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -362,6 +424,9 @@ body {
     opacity: 0;
     transition: all .5s;
     backface-visibility: hidden; }
+    @media (max-width: 37.5em) {
+      .story__caption {
+        transform: none; } }
   .story:hover .story__caption {
     opacity: 1;
     transform: translate(-50%, -50%); }
@@ -380,6 +445,9 @@ body {
   opacity: 0.7;
   z-index: -1;
   overflow: hidden; }
+  @media (max-width: 37.5em) {
+    .bg-video {
+      display: none; } }
   .bg-video__content {
     height: 100%;
     width: 100%;
@@ -387,6 +455,15 @@ body {
 
 .form__group:not(:last-child) {
   margin-bottom: 3rem; }
+
+@media (max-width: 37.5em) {
+  .form__group__btns {
+    display: flex; } }
+
+@media (max-width: 37.5em) {
+  .form__group__btn {
+    padding: 1rem 1.5rem;
+    margin-right: 8rem; } }
 
 .form__input {
   border: none;
@@ -400,6 +477,9 @@ body {
   width: 90%;
   display: block;
   transition: all .3s; }
+  @media (max-width: 37.5em) {
+    .form__input {
+      padding: 0.8rem; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -460,6 +540,10 @@ body {
 
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
+
+@media (max-width: 37.5em) {
+  #name {
+    width: 100%; } }
 
 .popup {
   height: 100vh;
@@ -526,17 +610,32 @@ body {
     hyphens: auto; }
 
 .header {
-  height: 95vh;
+  height: 85vh;
   position: relative;
   background-image: linear-gradient(to right bottom, rgba(133, 176, 237, 0.35), rgba(58, 176, 240, 0.35)), url("../img/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg");
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @supports (clip-path: polygon(0, 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      height: 95vh; } }
+  @media (max-width: 56.25em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+  @media (max-width: 37.5em) {
+    .header {
+      width: 100%; } }
   .header__logo-box {
     position: absolute;
     top: 40px;
     left: 40px; }
+    @media (max-width: 37.5em) {
+      .header__logo-box {
+        display: none; } }
   .header__logo {
     height: 35px; }
   .header__text-box {
@@ -544,6 +643,12 @@ body {
     top: 50%;
     left: 25%;
     text-align: center; }
+    @media (max-width: 37.5em) {
+      .header__text-box {
+        position: absolute;
+        top: 45%;
+        right: 30%;
+        text-align: center; } }
 
 .footer {
   background-color: #333;
@@ -563,6 +668,10 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     margin: 0 auto; }
+    @media (max-width: 37.5em) {
+      .footer__navigation {
+        margin-left: 0;
+        margin-right: 10%; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -577,6 +686,11 @@ body {
     text-transform: uppercase;
     transition: all .2s;
     padding: 1.5rem; }
+    @media (max-width: 37.5em) {
+      .footer__link:link, .footer__link:visited {
+        font-size: 1.2rem;
+        padding: 1rem 0.5rem;
+        text-align: center; } }
   .footer__link:hover, .footer__link:active {
     color: rgba(85, 227, 38, 0.855);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
@@ -597,6 +711,16 @@ body {
   box-shadow: 0 1rem 2rem 3rem #000, 0.1;
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      position: fixed;
+      top: 6rem;
+      right: 18rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      position: fixed;
+      top: 4rem;
+      right: 10.5rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -608,6 +732,16 @@ body {
   background-image: radial-gradient(#85B0ED, #3AB0F0);
   z-index: 10;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      position: fixed;
+      top: 6.5rem;
+      right: 18.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      position: fixed;
+      top: 4.5rem;
+      right: 11rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -699,11 +833,20 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      display: flex;
+      flex-direction: column; } }
 
 .row {
   display: flex;
   justify-content: space-between;
   width: 100%; }
+  @media (max-width: 56.25em) {
+    .row {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10%; } }
 
 .about-imgs {
   width: 80%; }
@@ -721,6 +864,13 @@ body {
   justify-content: space-evenly;
   margin-top: -10rem;
   transform: skewY(-7deg); }
+  @media (max-width: 56.25em) {
+    .section-features {
+      margin-top: 12rem; } }
+  @media (max-width: 37.5em) {
+    .section-features {
+      display: flex;
+      flex-direction: column; } }
   .section-features > * {
     transform: skewY(7deg); }
 
@@ -732,10 +882,19 @@ body {
 .section-stories {
   position: relative;
   padding: 15rem 0; }
+  @media (max-width: 37.5em) {
+    .section-stories {
+      background-color: #c48484; } }
 
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(to right, #68acb5 0%, #68acb5 100%); }
+  @media (max-width: 56.25em) {
+    .section-book {
+      margin-left: -16rem;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-image: none; } }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
@@ -748,6 +907,9 @@ body {
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
 
 .success {
   display: flex;

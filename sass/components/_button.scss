@@ -11,6 +11,11 @@
         position:relative;
         border:none;
         cursor:pointer;
+
+        @include respond(phone){
+            padding: 7px 12px;
+            font-size:1.5rem;
+        }
     }
 
     &:hover {

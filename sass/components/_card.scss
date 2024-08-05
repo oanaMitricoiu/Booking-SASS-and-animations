@@ -7,6 +7,19 @@
     height: 50rem;
     width:100%;
 
+    @include respond(tab-port){
+                display:flex;
+                flex-direction:column;
+                margin-bottom: 5rem;
+            }
+
+    &__pict {
+        @include respond(phone){
+        width:100%;
+        margin-left:4.5rem;
+    }
+    }
+
     &__side{
         height: 50rem;
         transition: all .8s ease;
@@ -21,9 +34,17 @@
        
         &--front {
             background-color:$color-white;
+            
+            @include respond(tab-port){
+                width:60%;
+            }
         }
         &--back {
             transform:rotateY(180deg);
+            
+            @include respond(tab-port){
+                width:60%;
+            }
 
             &-1 {
                 background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
@@ -42,10 +63,18 @@
     }
 
     &:hover &__side--front{
-        transform: rotateY(-180deg)
+        transform: rotateY(-180deg);
+
+        @include respond(tab-port){
+            width:60%;
+        }
     }
     &:hover &__side--back{
-        transform: rotateY(0deg)
+        transform: rotateY(0deg);
+        
+        @include respond(tab-port){
+            width:60%;
+        }
     }
 
     //FRONT SIDE STYLING
@@ -59,9 +88,15 @@
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
 
+        
+        
+
      &--1 {
         background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
         url("../img/nat-5.jpg");
+
+        
+
         
      }
      &--2 {
@@ -106,10 +141,17 @@
 
     &__details{
         padding: 3rem;
+
+        @include respond(phone){
+            padding:2rem;
+        }
+
         ul {
             list-style:none;
             width: 80%;
             margin: 0 auto;
+
+            
 
             li {
                 text-align:center;
